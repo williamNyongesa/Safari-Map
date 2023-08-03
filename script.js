@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const firstCardBody = document.querySelector(".card-body");
   const filterContainer = document.getElementById("afterClickContainer");
   const form = document.getElementById("locationForm");
+  const slides = document.querySelector(".carousel-item")
 
   // Fetch data from the server
   function getData() {
@@ -29,6 +30,11 @@ document.addEventListener("DOMContentLoaded", function () {
       dataListOption.textContent = place;
       dataList.appendChild(dataListOption);
 
+      let slides1 = document.createElement("div")
+      slides1.innerHTML = `
+      <img src="${image[4]}"alt="my images">
+      `
+      //slides.appendChild(slides1)
       if (id === 1) {
         let myimage1 = document.createElement("div");
         let firstCardBody1 = document.createElement("h6");
@@ -92,13 +98,36 @@ document.addEventListener("DOMContentLoaded", function () {
           <img src="${selectedDestination.image}" alt="Image of ${selectedDestination.place}">
           <p>${selectedDestination.description}</p>
           <p><strong>Weather: ${selectedDestination.weather}</strong></p>
-          <p>Temperature: ${selectedDestination.temperature}</p>
+          <p><strong>Temperature: ${selectedDestination.temperature}</strong></p>
         `;
         filterContainer.innerHTML = ""; // Clear previous content
         filterContainer.appendChild(destinationElement);
       }
     });
   }
+
+  // Function to add a new destination to the server
+function addDestination(newDestination) {
+  fetch('http://localhost:3000/destinations', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newDestination)
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Assuming the server responds with the newly created destination data
+    // Display the newly added destination or update the datalist with the new option
+    const dataListOption = document.createElement("option");
+    dataListOption.textContent = data.place;
+    dataList.appendChild(dataListOption);
+
+    // You may also choose to refresh the displayed data or do other actions as needed
+  })
+  .catch(error => alert(error));
+}
+
 
   // Fetch data from the server and display it in the datalist
   getData();

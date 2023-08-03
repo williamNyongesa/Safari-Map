@@ -71,9 +71,15 @@ nav ul li a:hover{
 
 
 
+.carousel-inner {
+    height: 300px;
+    width: 700px;
+    
+}
 
-
-
+span{
+    color: blue;
+}
 
 
 
