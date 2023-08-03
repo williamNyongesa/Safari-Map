@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const dataList = document.getElementById("datalistOptions");
-  const firstImage = document.querySelector(".col-md-4"); // Get the first element from the collection
+  const firstImage = document.querySelector(".col-md-4");
   const firstCardBody = document.querySelector(".card-body");
   const filterContainer = document.getElementById("afterClickContainer");
   const form = document.getElementById("locationForm");
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       let slides1 = document.createElement("div")
       slides1.innerHTML = `
-      <img src="${image[1]}"alt="my images">
+      <img src="${image[1]}" alt="my images">
       `
       //slides.appendChild(slides1)
       if (id === 1) {
@@ -55,21 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     })
 
-    // form.addEventListener("submit", function (event) {
-    //   event.preventDefault()
-    //   let selectedPlace = document.getElementById("exampleDataList").value
-    //   showPlace(selectedPlace)
-    // })
-
-
     form.addEventListener("click", function (event) {
       event.preventDefault();
       let selectedPlace = document.getElementById("exampleDataList").value;
       showPlace(selectedPlace);
     });
-    
-
-
 
     // Function to display selected place information
     function showPlace(selectedPlace) {
@@ -114,173 +104,53 @@ document.addEventListener("DOMContentLoaded", function () {
         filterContainer.appendChild(destinationElement);
       }
     });
-  }
 
-  // Function to add a new destination to the server
-function addDestination(newDestination) {
-  fetch('http://localhost:3000/destinations', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(newDestination)
-  })
-  .then(response => response.json())
-  .then(data => {
-    // Assuming the server responds with the newly created destination data
-    // Display the newly added destination or update the datalist with the new option
-    const dataListOption = document.createElement("option");
-    dataListOption.textContent = data.place;
-    dataList.appendChild(dataListOption);
-
-    // You may also choose to refresh the displayed data or do other actions as needed
-  })
-  .catch(error => alert(error));
-}
-
-
-  // Fetch data from the server and display it in the datalist
-  getData();
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  const dataList = document.getElementById("datalistOptions");
-  const firstImage = document.querySelector(".col-md-4"); // Get the first element from the collection
-  const firstCardBody = document.querySelector(".col-md-8 .card-body");
-  const form = document.getElementById("locationForm");
-  const slides = document.querySelector(".carousel-item");
-  const filterContainer = document.getElementById("filterContainer");
-
-  // Sample data
-  const destinationsData = {
-    "destinations": [
-      // Paste the JSON data here...
-    ]
-  };
-
-  // Fetch data from the server
-  function getData() {
-      fetch('http://localhost:3000/destinations')
-        .then(response => response.json())
-        .then(data => displayData(data))
-        .catch(error => alert(error));
-    
-   
-  }
-
-  // Display fetched data in the datalist and update the first destination content
-  function displayData(data) {
-    data.forEach(destination => {
-      const {
-        id,
-        place,
-        weather,
-        temperature,
-        description,
-        image
-      } = destination;
-
-      const dataListOption = document.createElement("option");
-      dataListOption.textContent = place;
-      dataList.appendChild(dataListOption);
-
-      if (id === 1) {
-        const destinationImage = document.createElement("img");
-        destinationImage.src = image;
-        firstImage.innerHTML = ""; // Clear previous content
-        firstImage.appendChild(destinationImage);
-
-        const destinationDescription = document.createElement("h5");
-        destinationDescription.textContent = description;
-        firstCardBody.innerHTML = ""; // Clear previous content
-        firstCardBody.appendChild(destinationDescription);
-
-        const destinationWeather = document.createElement("p");
-        destinationWeather.textContent = `Weather: ${weather}`;
-        firstCardBody.appendChild(destinationWeather);
-
-        const destinationTemperature = document.createElement("p");
-        destinationTemperature.textContent = `Temperature: ${temperature}`;
-        firstCardBody.appendChild(destinationTemperature);
-      }
-    });
-
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const selectedPlace = document.getElementById("exampleDataList").value;
-      showPlace(selectedPlace);
-    });
-
-    // Function to display selected place information
-    function showPlace(selectedPlace) {
-      const selectedDestination = data.find(destination => destination.place === selectedPlace);
-      if (selectedDestination) {
-        const destinationImage = document.createElement("img");
-        destinationImage.src = selectedDestination.image;
-        firstImage.innerHTML = ""; // Clear previous content
-        firstImage.appendChild(destinationImage);
-
-        const destinationDescription = document.createElement("h5");
-        destinationDescription.textContent = selectedDestination.description;
-        firstCardBody.innerHTML = ""; // Clear previous content
-        firstCardBody.appendChild(destinationDescription);
-
-        const destinationWeather = document.createElement("p");
-        destinationWeather.textContent = `Weather: ${selectedDestination.weather}`;
-        firstCardBody.appendChild(destinationWeather);
-
-        const destinationTemperature = document.createElement("p");
-        destinationTemperature.textContent = `Temperature: ${selectedDestination.temperature}`;
-        firstCardBody.appendChild(destinationTemperature);
-      } else {
-        console.log("Place not found in the data!");
-      }
+    // Function to add a new destination to the server
+    function addDestination(newDestination) {
+      fetch('http://localhost:3000/destinations', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(newDestination)
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        // Assuming the server responds with the newly created destination data
+        // Display the newly added destination or update the datalist with the new option
+        const dataListOption = document.createElement("option");
+        dataListOption.textContent = data.place;
+        dataList.appendChild(dataListOption);
+  
+        // You may also choose to refresh the displayed data or do other actions as needed
+      })
+      .catch(error => alert('Error adding destination: ' + error.message));
     }
-
-    // Handle input selection
-    document.getElementById("exampleDataList").addEventListener("input", function (event) {
-      const selectedInputValue = event.target.value;
-      const selectedDestination = data.find(destination => destination.place === selectedInputValue);
-      if (selectedDestination) {
-        const destinationElement = document.createElement("div");
-        destinationElement.innerHTML = `
-          <h4>${selectedDestination.place}</h4>
-          <img src="${selectedDestination.image}" alt="Image of ${selectedDestination.place}">
-          <p>${selectedDestination.description}</p>
-          <p><strong>Weather: ${selectedDestination.weather}</strong></p>
-          <p><strong>Temperature: ${selectedDestination.temperature}</strong></p>
-        `;
-        filterContainer.innerHTML = ""; // Clear previous content
-        filterContainer.appendChild(destinationElement);
-      }
+  
+    // Event listener for the Add Destination button
+    const postButton = document.getElementById("postButton");
+    postButton.addEventListener("click", function (event) {
+      event.preventDefault();
+  
+      // Sample new destination data (modify this according to your needs)
+      const newDestination = {
+        place: "New Destination",
+        weather: "Sunny",
+        temperature: "Hot",
+        description: "A new place to explore",
+        image: "https://example.com/new-destination-image.jpg"
+      };
+  
+      addDestination(newDestination);
     });
+  
+  
+
   }
 
   // Fetch data from the server and display it in the datalist
