@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Safari App</title>
+</head>
+<body>
+  <header class="crazy-header">
+    <h1>WELCOME TO SAFARI MAP!</h1>
+    <p>NAVIGATE THROUGH TO FIND THE BEST PLCAE WITH BEST WEATHER!</p>
+</header>
+  <nav>
+    <ul>
+      <div class="left">
+        <li><a href="#">MORE</a></li>
+      </div>
+      <div class="right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#more">MORE PLACES</a></li>
+      </div>
+    </ul>
+  </nav>
+  <div class="container-lg">
+    <div id="locationForm">
+      <label for="exampleDataList" class="form-label">Input Data</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Your Location Here...">
+      <datalist id="datalistOptions"></datalist>
+    </div>
+    <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <div id="imageContainer">
+            <div id="loadingIndicator" class="loading"></div>
+          </div>
+        </div>
+
+        
+
+
+
+        <div class="col-md-8">
+          <div class="card-body">
+            <div id="weatherInfo"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded"><strong>continue navigating</strong> </div>
+    <div class="container-fluid" id="afterClickContainer">...hhhhh</div>
+    <section id="about">
+      <div class="imagePart">
+        <img src="pexels-jonathan-borba-5359802.jpg" alt="founder image">
+      </div>
+      <div class="contextPart">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore amet omnis nesciunt eligendi repellat nobis, incidunt id expedita illum accusantium, ex nihil recusandae facilis placeat iure, inventore sapiente harum laudantium nam unde? Esse, sequi, rem nostrum, totam magnam voluptas nesciunt incidunt ipsa quod quidem consequatur! Impedit eius itaque voluptas, hic quae aperiam ab, voluptate distinctio, aut aliquam omnis. Perferendis autem ut esse itaque in quam modi non. Magni architecto dolores illo in adipisci sed ut saepe maiores voluptate. Illum temporibus quod repellendus architecto consequuntur possimus recusandae, qui facilis hic rem minus ipsam distinctio labore eos nemo quibusdam, fuga enim alias.</div>
+    </section>
+    <section id="more"></section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>

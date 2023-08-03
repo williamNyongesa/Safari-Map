@@ -1,0 +1,116 @@
+{
+    "destinations": [
+      {
+        "id":1,
+        "place": "Diani Beach Paradise",
+        "weather": "Sunny",
+        "temperature": "Hot",
+        "description": "Relax on the stunning Diani Beach and experience the crystal-clear waters of the Indian Ocean.",
+        "image": "https://images.pexels.com/photos/17391414/pexels-photo-17391414/free-photo-of-seashore-in-acapulco-mexico.jpeg?auto=compress&cs=tinysrgb&w=400"
+      },
+      {
+        "id":2,
+        "place": "Mount Kenya Serenity",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Embrace the tranquility of Mount Kenya and trek through its diverse landscapes.",
+        "image": "https://images.pexels.com/photos/4215109/pexels-photo-4215109.jpeg?auto=compress&cs=tinysrgb&w=400"
+      },
+      {
+        "id":3,
+        "place": "Masai Mara Safari",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Embark on an unforgettable safari in the iconic Masai Mara and witness the wildebeest migration.",
+        "image": "https://images.pexels.com/photos/13549476/pexels-photo-13549476.jpeg?auto=compress&cs=tinysrgb&w=400"
+      },
+      {
+        "id":4,
+        "place": "Lamu Island Retreat",
+        "weather": "Sunny",
+        "temperature": "Hot",
+        "description": "Step back in time on Lamu Island and explore its rich Swahili culture and architecture.",
+        "image": "https://www.pexels.com/photo/sungloungers-on-the-beach-14629414/"
+      },
+      {
+        "id":5,
+        "place": "Tsavo National Park Adventure",
+        "weather": "Hot",
+        "temperature": "Hot",
+        "description": "Experience the untamed wilderness of Tsavo National Park and encounter its diverse wildlife.",
+        "image": "https://www.pexels.com/photo/giraffe-standing-on-grass-field-3529692/"
+      },
+      {
+        "id":6,
+        "place": "Nairobi City Delights",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Discover the vibrant city life of Nairobi, including its cultural attractions and bustling markets.",
+        "image": "https://www.pexels.com/photo/buildings-silhouettes-at-dusk-in-the-nairobi-city-kenya-12959528/"
+      },
+      {
+        "id":7,
+        "place": "Lake Nakuru Sanctuary",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Explore the beautiful Lake Nakuru and its famous flamingo population in the national park.",
+        "image": "https://www.pexels.com/photo/clear-sky-over-lake-and-green-hills-17456925/"
+      },
+      {
+        "id":8,
+        "place": "Amboseli Elephant Safari",
+        "weather": "Sunny",
+        "temperature": "Hot",
+        "description": "Witness majestic elephants and breathtaking views of Mount Kilimanjaro in Amboseli National Park.",
+        "image": "https://www.pexels.com/photo/family-is-everything-11866350/"
+      },
+      {
+        "id":9,
+        "place": "Watamu Coastal Getaway",
+        "weather": "Sunny",
+        "temperature": "Hot",
+        "description": "Escape to Watamu's coastal paradise and indulge in water sports and marine life exploration.",
+        "image": "https://www.pexels.com/photo/terrace-behind-window-opening-on-sea-shore-17467020/"
+      },
+      {
+        "id":10,
+        "place": "Hell's Gate Adventure",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Go biking, hiking, and rock climbing in the scenic landscapes of Hell's Gate National Park.",
+        "image": "https://www.pexels.com/photo/dirt-road-towards-mountains-behind-broken-gate-17422028/"
+      },
+      {
+        "id":11,
+        "place": "Mombasa Island Excursion",
+        "weather": "Sunny",
+        "temperature": "Hot",
+        "description": "Experience the coastal charm of Mombasa, with its historic sites and vibrant markets.",
+        "image": "https://www.pexels.com/photo/seashore-in-acapulco-mexico-17391414/"
+      },
+      {
+        "id":12,
+        "place": "Chyulu Hills Wilderness",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Venture into the unspoiled landscapes of Chyulu Hills and encounter diverse flora and fauna.",
+        "image": "https://www.pexels.com/photo/landscape-with-trees-meadow-and-hills-7785233/"
+      },
+      {
+        "id":13,
+        "place": "Samburu Cultural Encounter",
+        "weather": "Hot",
+        "temperature": "Hot",
+        "description": "Immerse yourself in the traditions and culture of the Samburu people in Northern Kenya.",
+        "image": "https://www.pexels.com/@nirav-shah-6927042/"
+      },
+      {
+        "id":14,
+        "place": "Aberdare Highlands Retreat",
+        "weather": "Mild",
+        "temperature": "Cool",
+        "description": "Unwind in the serene landscapes of Aberdare Highlands and enjoy wildlife sightings.",
+        "image": "https://www.pexels.com/photo/brown-house-in-between-of-mountains-730981/"
+      }
+  ]
+  }
