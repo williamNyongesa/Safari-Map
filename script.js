@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
         `;
         firstCardBody1.innerHTML = `
           <h4>${description}</h4>
-          <p>Weather: ${weather}</p>
+          <p><strong>Weather: ${weather}</strong></p>
           <p>Temperature: ${temperature}</p>
         `;
 

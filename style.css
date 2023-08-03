@@ -1,119 +1,134 @@
-*{
-    margin: 0;
-    padding: 0;
-}
-.myheader{
-    background-color: #044215; /* Magenta */
-    padding: 50px;
-    text-align: center;
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.myheader h1 {
-    font-size: 72px;
-    color: #00ff00; /* Green */
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    margin-bottom: 20px;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-.myheader p {
-    font-size: 24px;
-    color: #0000ff; /* Blue */
-    font-style: italic;
-    text-transform: capitalize;
-    letter-spacing: 5px;
-    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
-}
-nav{
-    background: #25bc03;
-    height: 10vh;
-}
-nav ul{
-    display: flex;
-}
-.right{
-    display: flex;
-    padding: 5px;
-}
-nav ul li{
-    list-style: none;
-    padding: 5px;
-}
-nav ul li a{
-    color: #fff;
-    text-decoration: none;
-}
-nav ul li a:hover{
-    color: #f6d309;
-    font-weight: bold;
-    font-size: larger;
-    
-}
-.imagePart img{
-    height: 300px;
-    width: 300px;
-    border-radius: 30%;
-    padding: 10px;
-    margin: 10px;
-}
-#about{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #bbafaf;
-}
-.imagePart{flex-basis: 40%;
-}
-.contextPart{
-    flex-basis: 60%;
+.container-lg {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-
-
-
-.carousel-inner {
-    height: 300px;
-    width: 700px;
-    
+/* Header Styles */
+.crazy-header {
+  background-color: #007bff;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
 }
 
-span{
-    color: blue;
+/* Navigation Styles */
+nav {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }
 
-
-
-
-
-
-
-.col-md-4{
-    height: 400px;
-    width: 600px;
-    flex-basis: 40%;
-}
-.col-md-4 img{
-
-    
-    height: 400px;
-}
-#loacationForm{
-    width: 500px;
-    color: #f6f2f2;
-}
-.card{
-    
-    
-} 
-.card mb-3{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    height: 100vh;
-}
-.card mb-3{
-    
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
 
+ul li a {
+  text-decoration: none;
+  color: #fff;
+}
 
+/* Carousel Styles */
+.carousel-inner img {
+  max-height: 400px;
+  object-fit: cover;
+}
+
+/* Location Form Styles */
+#locationForm {
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  margin-top: 20px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  text-align: center;
+}
+
+.card img {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* "Search" Button Styles */
+#searchButton {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#searchButton:hover {
+  background-color: #0056b3;
+}
+
+/* "MORE" Link Styles */
+.right li a[href='#more'] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.right li a[href='#more']:hover {
+  background-color: #0056b3;
+}
+
+/* Footer Styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Section Styles */
+section {
+  padding: 20px;
+}
+
+.imagePart img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.contextPart {
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+/* Additional Styles */
+.loading {
+  /* Define your loading spinner styles here */
+}
+
+/* Customize other styles as needed */
