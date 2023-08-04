@@ -135,6 +135,150 @@
       "description": "A new place to explore",
       "image": "https://example.com/new-destination-image.jpg",
       "id": 17
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 18
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 19
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 20
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 21
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 22
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 23
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 24
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 25
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 26
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 27
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 28
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 29
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 30
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 31
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 32
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 33
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 34
+    },
+    {
+      "place": "New Destination",
+      "weather": "Sunny",
+      "temperature": "Hot",
+      "description": "A new place to explore",
+      "image": "https://example.com/new-destination-image.jpg",
+      "id": 35
     }
   ]
 }
