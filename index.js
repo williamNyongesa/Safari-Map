@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function () {
   const dataList = document.getElementById("datalistOptions");
   const firstImage = document.querySelector(".col-md-4");
@@ -5,6 +6,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("locationForm");
   const postButton = document.getElementById("postButton");
 
+
+  
   // Fetch data from the server
   function getData() {
     fetch('https://safari-map.onrender.com/destinations')
