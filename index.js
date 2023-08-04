@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Function to add a new destination to the server
   function addDestination(newDestination) {
-    fetch('http://localhost:3000/destinations', {
+    fetch('https://safari-map.onrender.com/destinations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(data => {
-      // Assuming the server responds with the newly created destination data
+     
       // Display the newly added destination or update the datalist with the new option
       const dataListOption = document.createElement("option");
       dataListOption.textContent = data.place;
