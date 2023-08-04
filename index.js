@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Fetch data from the server and display it in the datalist
   getData();
   
-  // Event listener for the Add Destination button
+  // Event listener for the button 
   postButton.addEventListener("click", function (event) {
     event.preventDefault();
     addDestination();

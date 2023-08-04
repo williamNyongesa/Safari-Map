@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -5,6 +6,7 @@ body {
   background-color: #f0f0f0;
 }
 
+/* Header Styles */
 header.crazy-header {
   background-color: #0066cc;
   color: #fff;
@@ -21,6 +23,7 @@ header.crazy-header p {
   font-size: 18px;
 }
 
+/* Navigation Styles */
 nav {
   background-color: #444;
   color: #fff;
@@ -44,19 +47,23 @@ nav ul li a {
   color: #fff;
 }
 
+/* Container Styles */
 .container-lg {
   padding: 20px;
 }
 
+/* Carousel Styles */
 .carousel-inner img {
   height: 300px;
   object-fit: cover;
 }
 
+/* Form Styles */
 #locationForm {
   margin-bottom: 20px;
 }
 
+/* Card Styles */
 .card-body {
   display: flex;
   flex-direction: column;
@@ -69,6 +76,7 @@ nav ul li a {
   object-fit: cover;
 }
 
+/* Shadow Styles */
 .shadow-lg {
   text-align: center;
   padding: 10px;
@@ -76,6 +84,7 @@ nav ul li a {
   background-color: #f0f0f0;
 }
 
+/* About Section Styles */
 section#about {
   display: flex;
   justify-content: center;
@@ -91,6 +100,7 @@ section#about img {
   margin-right: 20px;
 }
 
+/* Footer Styles */
 footer {
   background-color: #444;
   color: #fff;
@@ -113,6 +123,83 @@ footer p {
   margin: 0;
 }
 
-#addDestinationBtn {
+/* Add Destination Button Styles */
+#postButton {
   margin-top: 20px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#postButton:hover {
+  background-color: #45a049;
+}
+
+#postButton:focus {
+  outline: none;
+}
+
+/* Prompt Styles */
+.prompt {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.prompt-dialog {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.prompt-dialog label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.prompt-dialog input[type="text"],
+.prompt-dialog textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  resize: none;
+}
+
+.prompt-dialog button {
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.prompt-dialog button:hover {
+  background-color: #45a049;
+}
+
+.prompt-dialog button:focus {
+  outline: none;
 }
