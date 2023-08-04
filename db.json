@@ -279,6 +279,14 @@
       "description": "A new place to explore",
       "image": "https://example.com/new-destination-image.jpg",
       "id": 35
+    },{
+      "place":"eldoret",
+      "weather":"cold",
+      "temperature":"Unknown",
+      "description":"A new place to explore",
+      "image":"edf",
+      "id":36
+
     }
   ]
 }
