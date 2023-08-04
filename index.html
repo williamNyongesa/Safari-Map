@@ -1,89 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <title>Safari App</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Safari App</title>
 </head>
 <body>
-    <header class="crazy-header">
-        <h1>WELCOME TO SAFARI MAP!</h1>
-        <p>NAVIGATE THROUGH TO FIND THE BEST PLACE WITH THE BEST WEATHER!</p>
-    </header>
+  <header class="crazy-header">
+    <h1>WELCOME TO SAFARI MAP!</h1>
+    <p>NAVIGATE THROUGH TO FIND THE BEST PLACE WITH THE BEST WEATHER!</p>
+  </header>
 
-    <nav>
-        <ul>
-            <div class="right">
-                <li><a href="#about">ABOUT</a></li>
-            </div>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <div class="right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#more">MORE PLACES</a></li>
+      </div>
+    </ul>
+  </nav>
 
-    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-        <span><strong>Check out these places</strong></span>
-        <div class="carousel-inner">
-            <!-- Carousel items go here -->
-        </div>
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <span><strong>Check out these places</strong></span>
+    <div class="carousel-inner">
+      <!-- Carousel items go here -->
+    </div>
+  </div>
+
+  <div class="container-lg">
+    <div id="locationForm">
+      <label for="exampleDataList" class="form-label">Input Data</label>
+      <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Your Location Here...">
+      <datalist id="datalistOptions"></datalist>
+      <button type="button" id="postButton" class="btn btn-primary">Add Destination</button>
     </div>
 
-    <div class="container-lg">
-        <div id="locationForm">
-            <label for="exampleDataList" class="form-label">Input Data</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Search Your Location Here...">
-            <datalist id="datalistOptions"></datalist>
-            <button type="button" id="postButton" class="btn btn-primary">Add Destination</button>
+    <div class="row">
+      <div class="col-md-4">
+        <div id="imageContainer">
+          <div id="loadingIndicator" class="loading"></div>
         </div>
+      </div>
 
-        <div class="row">
-            <div class="col-md-4">
-                <div id="imageContainer">
-                    <div id="loadingIndicator" class="loading"></div>
-                </div>
+      <div class="col-md-8">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="card-body">
+            <h5 class="card-title">Destination Info</h5>
+            <div id="destinationInfo">
+              <h4>Select a destination to view details.</h4>
             </div>
-
-            <div class="col-md-8">
-                <div class="card mb-3" style="max-width: 540px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Destination Info</h5>
-                        <div id="destinationInfo">
-                            <h4>Select a destination to view details.</h4>
-                            <button type="button" id="updateButton" class="btn btn-success mt-3">Update Destination</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-
-        <div class="shadow-lg p-3 mb-5 bg-body rounded">
-            <strong>Continue navigating</strong>
-        </div>
-
-        <section id="about">
-            <div class="imagePart">
-                <img src="https://images.pexels.com/photos/17476982/pexels-photo-17476982/free-photo-of-rocks-in-sairme-georgia.jpeg?auto=compress&cs=tinysrgb&w=400" alt="founder image">
-            </div>
-            <div class="contextPart">
-                <strong>The Safari App is an interactive and visually appealing web application designed to help users explore and discover various exciting destinations in Kenya, Africa. The application provides users with valuable information about different places, including weather conditions, temperature, and captivating descriptions of each location. By utilizing the Safari App, users can plan their dream vacation, search for the best destinations with favorable weather, and find inspiration for their next adventure.</strong>
-            </div>
-        </section>
+      </div>
     </div>
 
-    <footer>
-        <div>
-            <p>Follow us on Facebook:</p>
-            <a href="https://www.facebook.com/your_facebook_page" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-        </div>
-        <div>
-            <p>Contact us via Email:</p>
-            <a href="mailto:your_email@example.com" target="_blank"><img src="email-icon.png" alt="Email"></a>
-        </div>
-        <p>&copy; 2023 Safari App. All rights reserved.</p>
-    </footer>
+    <div class="shadow-lg p-3 mb-5 bg-body rounded">
+      <strong>Continue navigating</strong>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <section id="about">
+      <div class="imagePart">
+        <img src="https://images.pexels.com/photos/469676/pexels-photo-469676.jpeg?auto=compress&cs=tinysrgb&w=400" alt="founder image">
+      </div>
+      <div class="contextPart">
+        <strong>The Safari App is an interactive and visually appealing web application designed to help users explore and discover various exciting destinations in Kenya, Africa. The application provides users with valuable information about different places, including weather conditions, temperature, and captivating descriptions of each location. By utilizing the Safari App, users can plan their dream vacation, search for the best destinations with favorable weather, and find inspiration for their next adventure.</strong>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div>
+      <p>Follow us on Facebook:</p>
+      <a href="https://www.facebook.com/your_facebook_page" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+    </div>
+    <div>
+      <p>Contact us via Email:</p>
+      <a href="mailto:your_email@example.com" target="_blank"><img src="email-icon.png" alt="Email"></a>
+    </div>
+    <p>&copy; 2023 Safari App. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+  <script src="index.js"></script>
 </body>
 </html>

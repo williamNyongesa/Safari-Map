@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const dataList = document.getElementById("datalistOptions");
   const firstImage = document.querySelector(".col-md-4");
@@ -6,8 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("locationForm");
   const postButton = document.getElementById("postButton");
 
-
-  
   // Fetch data from the server
   function getData() {
     fetch('https://safari-map.onrender.com/destinations')
@@ -26,12 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
         temperature,
         description,
         image
-      } = destination
+      } = destination;
       
-
       const dataListOption = document.createElement("option");
       dataListOption.textContent = place;
       dataList.appendChild(dataListOption);
+
+
 
       if (id === 1) {
         let myimage1 = document.createElement("div");
@@ -87,7 +85,28 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to add a new destination to the server
-  function addDestination(newDestination) {
+  function addDestination() {
+    // Prompt the user for the new destination data
+    const newDestination = {
+      place: window.prompt("Enter the destination name:"),
+      weather: window.prompt("Enter the weather at the destination:"),
+      temperature: window.prompt("Enter the temperature at the destination:"),
+      description: window.prompt("Enter a description of the destination:"),
+      image: window.prompt("Enter the image URL of the destination:")
+    };
+  
+    // Make sure all fields are provided by the user
+    if (
+      !newDestination.place ||
+      !newDestination.weather ||
+      !newDestination.temperature ||
+      !newDestination.description ||
+      !newDestination.image
+    ) {
+      alert("Please fill in all the destination details.");
+      return;
+    }
+  
     fetch('https://safari-map.onrender.com/destinations', {
       method: 'POST',
       headers: {
@@ -102,34 +121,22 @@ document.addEventListener("DOMContentLoaded", function () {
       return response.json();
     })
     .then(data => {
-     
       // Display the newly added destination or update the datalist with the new option
       const dataListOption = document.createElement("option");
       dataListOption.textContent = data.place;
       dataList.appendChild(dataListOption);
-
+  
       // You may also choose to refresh the displayed data or do other actions as needed
     })
     .catch(error => alert('Error adding destination: ' + error.message));
   }
-
+  
   // Fetch data from the server and display it in the datalist
   getData();
-
+  
   // Event listener for the Add Destination button
   postButton.addEventListener("click", function (event) {
     event.preventDefault();
-
-    // Sample new destination data (modify this according to your needs)
-    const newDestination = {
-      place: "New Destination",
-      weather: "Sunny",
-      temperature: "Hot",
-      description: "A new place to explore",
-      image: "https://example.com/new-destination-image.jpg"
-    };
-
-    addDestination(newDestination);
-  });
-
-});
+    addDestination();
+  })
+})
